@@ -32,7 +32,7 @@ proj4(firstProjection, pointObj);
 
 // $ExpectType Converter
 proj4(firstProjection, secondProjection);
-// $ExpectType Converter
+// $ExpectType Converter & { oProj: ProjectionDefinition }
 proj4(firstProjection);
 
 // $ExpectType number[]
