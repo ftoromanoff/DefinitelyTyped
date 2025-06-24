@@ -96,7 +96,8 @@ declare namespace proj4 {
     const version: string;
 }
 
-declare function proj4(fromProjection: string, toProjection?: string): proj4.Converter;
+declare function proj4(fromProjection: string): proj4.Converter & { oProj: ProjectionDefinition };
+declare function proj4(fromProjection: string, toProjection: string): proj4.Converter;
 declare function proj4<T extends proj4.TemplateCoordinates>(
     toProjection: string,
     coordinates: T,
